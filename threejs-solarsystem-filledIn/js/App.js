@@ -19,12 +19,14 @@ export default class App {
 
         //Oppretter instans av Three.js sitt PerspectiveCamera
         this.camera = new PerspectiveCamera(this.fov, this.aspect, this.near, this.far);
-        this.camera.position.z = 50; //Flytter kamera litt bakover fra midt i vår "verden"
+        
 
         //Oppretter Three.js scene objekt
         this.scene = new Scene();
         this.scene.add(this.camera);
 
+        this.camera.position.z = 50; //Flytter kamera litt bakover fra midt i vår "verden"
+        
         //Vi vil fortelle Three.js at vi vil bruke webgl2
         let canvas = document.createElement('canvas');
         let context = canvas.getContext('webgl2');
