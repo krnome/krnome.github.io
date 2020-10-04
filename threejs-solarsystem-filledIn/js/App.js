@@ -23,6 +23,7 @@ export default class App {
 
         //Oppretter Three.js scene objekt
         this.scene = new Scene();
+        this.scene.add(this.camera);
 
         //Vi vil fortelle Three.js at vi vil bruke webgl2
         let canvas = document.createElement('canvas');
