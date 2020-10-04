@@ -41,6 +41,7 @@ export default class SolarSystem{
 
         //Oppretter selve sol-Meshen, som nå består av et Geometry-objekt og et Material-objekt
         this.sun = new Mesh(sunGeometry, sunMaterial);
+        this.sun.position.z = -50;
 
         //Legge solen til scenen
         scene.add(this.sun);
